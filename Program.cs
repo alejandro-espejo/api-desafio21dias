@@ -10,9 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo {
-        Title = "Web API desafio 21 dias.",
+        Title = "Web API desafio 21 dias Aluno",
         Version = "v1",
-        Description = "API feita no curso Desafio 21 Dias C#"
+        Description = "API feita para alunos no desafio 21 dias"
     });
 });
 

@@ -4857,11 +4857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias\\api-desafio21dias.csproj",
+      "projectUniqueName": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias-alunos\\api-desafio21dias.csproj",
       "projectName": "api-desafio21dias",
-      "projectPath": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias\\api-desafio21dias.csproj",
+      "projectPath": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias-alunos\\api-desafio21dias.csproj",
       "packagesPath": "C:\\Users\\aleja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias\\obj\\",
+      "outputPath": "C:\\Users\\aleja\\Desktop\\torneseumprogramador\\desafio21dias-dotnet\\api-desafio21dias-alunos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aleja\\AppData\\Roaming\\NuGet\\NuGet.Config"
