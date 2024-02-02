@@ -70,3 +70,4 @@ C:\Users\aleja\Desktop\torneseumprogramador\desafio21dias-dotnet\api-desafio21di
 C:\Users\aleja\Desktop\torneseumprogramador\desafio21dias-dotnet\api-desafio21dias\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\aleja\Desktop\torneseumprogramador\desafio21dias-dotnet\api-desafio21dias\bin\Debug\net8.0\appsettings.Sample.json
 C:\Users\aleja\Desktop\torneseumprogramador\desafio21dias-dotnet\api-desafio21dias\obj\Debug\net8.0\api-desafio21dias.sourcelink.json
+C:\Users\aleja\Desktop\torneseumprogramador\desafio21dias-dotnet\api-desafio21dias\bin\Debug\net8.0\EntityFrameworkPaginateCore.dll
