@@ -1,0 +1,16 @@
+CREATE DATABASE desafio21diasEFMVC;
+
+CREATE TABLE aluno(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	nome VARCHAR(255) NOT NULL,
+	matricula VARCHAR(255) NOT NULL,
+	notas VARCHAR(255)
+);
+
+CREATE TABLE f_cli_for (
+	cod_cfo INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	nome_fantasia VARCHAR(150) NOT NULL,
+	razao VARCHAR(150) NOT NULL,
+	cpf_cnpj VARCHAR(50),
+	endereco VARCHAR(255) NOT NULL
+);
