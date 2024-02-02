@@ -1,5 +1,5 @@
+using api_desafio21dias.Models;
 using Microsoft.EntityFrameworkCore;
-using mvc_entity.Models;
 
 namespace api_desafio21dias.Servicos
 {
@@ -8,5 +8,7 @@ namespace api_desafio21dias.Servicos
         public DbContexto(DbContextOptions<DbContexto> options) : base(options) { }
 
         public DbSet<Aluno> Alunos { get; set; }
+
+        public DbSet<Fornecedor> Fornecedores { get; set; }
     }
 }

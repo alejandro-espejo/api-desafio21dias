@@ -10,26 +10,26 @@ using api_desafio21dias.Models;
 namespace api_desafio21dias.Controllers
 {
     [ApiController]
-    public class AlunosController : ControllerBase //Controller
+    public class FornecedoresController : ControllerBase
     {
         private readonly DbContexto _context;
 
-        public AlunosController(DbContexto context)
+        public FornecedoresController(DbContexto context)
         {
             _context = context;
         }
 
-        // GET: Alunos
+        // GET: Fornecedor
         [HttpGet]
-        [Route("/alunos")]
+        [Route("/fornecedores")]
         public async Task<IActionResult> Index()
         {
-            return StatusCode(200, await _context.Alunos.ToListAsync());
+            return StatusCode(200, await _context.Fornecedores.ToListAsync());
         }
 
-        // GET: alunos/5
+        // GET: fornecedores/5
         [HttpGet]
-        [Route("/alunos/{id}")]
+        [Route("/fornecedores/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -37,45 +37,45 @@ namespace api_desafio21dias.Controllers
                 return NotFound();
             }
 
-            var aluno = await _context.Alunos
+            var fornecedor = await _context.Fornecedores
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (aluno == null)
+            if (fornecedor == null)
             {
                 return NotFound();
             }
-            return StatusCode(200, aluno);
+            return StatusCode(200, fornecedor);
         }
 
-        // POST: /alunos
+        // POST: /fornecedores
         [HttpPost]
-        [Route("/alunos")]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Matricula,Notas")] Aluno aluno)
+        [Route("/fornecedores")]
+        public async Task<IActionResult> Create(Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(aluno);
+                _context.Add(fornecedor);
                 await _context.SaveChangesAsync();
-                return StatusCode(201, aluno);
+                return StatusCode(201, fornecedor);
             }
-            return StatusCode(201, aluno);
+            return StatusCode(201, fornecedor);
         }
 
-        // PUT: alunos/5
+        // PUT: fornecedores/5
         [HttpPut]
-        [Route("/alunos/{id}")]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Matricula,Notas")] Aluno aluno)
+        [Route("/fornecedores/{id}")]
+        public async Task<IActionResult> Edit(int id, Fornecedor fornecedor)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    aluno.Id = id;
-                    _context.Update(aluno);
+                    fornecedor.Id = id;
+                    _context.Update(fornecedor);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AlunoExists(aluno.Id))
+                    if (!FornecedorExists(fornecedor.Id))
                     {
                         return NotFound();
                     }
@@ -84,29 +84,28 @@ namespace api_desafio21dias.Controllers
                         throw;
                     }
                 }
-                return StatusCode(200, aluno);
+                return StatusCode(200, fornecedor);
             }
-            return StatusCode(200, aluno);
+            return StatusCode(200, fornecedor);
         }
         
-        // DELETE: aluno/5
-        [HttpDelete] // , ActionName("Delete")
-        [Route("/alunos/{id}")]
+        // DELETE: fornecedores/5
+        [HttpDelete]
+        [Route("/fornecedores/{id}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var aluno = await _context.Alunos.FindAsync(id);
-            if (aluno != null)
+            var fornecedor = await _context.Fornecedores.FindAsync(id);
+            if (fornecedor != null)
             {
-                _context.Alunos.Remove(aluno);
+                _context.Fornecedores.Remove(fornecedor);
             }
-
             await _context.SaveChangesAsync();
             return StatusCode(204);
         }
 
-        private bool AlunoExists(int id)
+        private bool FornecedorExists(int id)
         {
-            return _context.Alunos.Any(e => e.Id == id);
+            return _context.Fornecedores.Any(e => e.Id == id);
         }
     }
 }

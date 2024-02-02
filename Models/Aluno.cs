@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.SqlClient;
 using System.Xml;
 
-namespace mvc_entity.Models
+namespace api_desafio21dias.Models
 {
     [Table("tb_alunos")]
     public partial class Aluno
