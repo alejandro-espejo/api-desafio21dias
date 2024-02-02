@@ -13,5 +13,13 @@ namespace api_desafio21dias.Controllers
         {
             return new HomeView();
         }
+
+        /*
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return Redirect("/swagger");
+        }
+        */
     }
 }
